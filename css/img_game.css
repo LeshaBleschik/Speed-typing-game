@@ -3,6 +3,7 @@
   font-size: 1.5rem;
   display: none;
 }
+
 img {
   border: 15px solid rgba(92, 0, 83);
   padding: 3px;
@@ -10,15 +11,18 @@ img {
   width: 400px;
   height: 400px;
 }
+
 #container {
   text-align: center;
   margin: 0 auto;
   font-size: 1rem;
   padding: 2%;
 }
+
 h1 {
   text-align: center;
 }
+
 .rules {
   background-color: #963406;
   padding: 1%;
@@ -27,22 +31,28 @@ h1 {
   font-weight: bold;
   border-radius: 0.6rem;
 }
+
 #start {
   margin-bottom: 2%;
 }
+
 #rules-title {
   color: black;
   margin: 0;
 }
+
 .rules-content {
   display: none;
 }
+
 #rules-title:hover {
   color: white;
 }
+
 #typingResult {
   font-weight: bold;
 }
+
 #typedWord {
   margin-top: 2%;
   border: 1.5px solid #0d39a8;
@@ -52,13 +62,16 @@ h1 {
   padding: 5px;
   font-size: 1.2rem;
 }
+
 #typedWord:focus {
   border: 3px solid black;
 }
+
 .info {
   margin: 1%;
   font-size: 1.3rem;
 }
+
 .show {
   display: block;
 }

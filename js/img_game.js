@@ -1,18 +1,18 @@
 let time = 5;
 let timer;
 let score = 0;
-let seconds = document.querySelector('#seconds');
-let start = document.querySelector('#start');
-let randomImg = document.querySelector('#randomImg');
-let typedWord = document.querySelector('#typedWord');
-let typingResult = document.querySelector('#typingResult');
-let timeLeft = document.querySelector('#timeLeft');
-let scoreDisplay = document.querySelector('#scoreDisplay');
-let hiddenWord = document.querySelector('#hiddenWord');
-let success = document.querySelector('#success');
-let error = document.querySelector('#error');
-let rulesTitle = document.querySelector('#rules-title');
-let rulesContent = document.querySelector('.rules-content');
+const seconds = document.querySelector('#seconds');
+const start = document.querySelector('#start');
+const randomImg = document.querySelector('#randomImg');
+const typedWord = document.querySelector('#typedWord');
+const typingResult = document.querySelector('#typingResult');
+const timeLeft = document.querySelector('#timeLeft');
+const scoreDisplay = document.querySelector('#scoreDisplay');
+const hiddenWord = document.querySelector('#hiddenWord');
+const success = document.querySelector('#success');
+const error = document.querySelector('#error');
+const rulesTitle = document.querySelector('#rules-title');
+const rulesContent = document.querySelector('.rules-content');
 
 const imgGalery = [
   {
@@ -456,7 +456,7 @@ function countDown() {
 }
 
 function gameFinish() {
-  typingResult.innerHTML = 'Игра окончена =(';
+  typingResult.innerHTML = 'Игра окончена.';
   typingResult.style.color = 'red';
   start.innerHTML = 'Начать заново!';
 }
