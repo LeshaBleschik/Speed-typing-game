@@ -1,0 +1,124 @@
+body {
+  font-family: 'Viaoda Libre', cursive;
+}
+
+#container {
+  margin: 0 auto;
+  background-color: #2adecf;
+  width: 800px;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  border: 2px solid olive;
+  text-align: center;
+  color: white;
+}
+
+.displayText {
+  margin-bottom: 1rem;
+}
+
+.textArea {
+  background-color: transparent;
+  outline: none;
+  border-radius: 0.7rem;
+  border: 3px solid steelblue;
+  height: 8rem;
+  width: 100%;
+  margin: auto;
+  resize: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  color: white;
+}
+
+.textArea:focus {
+  border-color: black;
+}
+
+.correct {
+  color: #14ff00;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+.title {
+  text-align: center;
+  margin: 3rem 0;
+  color: olive;
+}
+
+.btn-start {
+  display: block;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 7px;
+  background: red;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.btn-start:hover {
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.clear {
+  position: absolute;
+  right: 23.5%;
+  top: 19.5%;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 7px;
+  background: red;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.clear:hover {
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.tips {
+  color: black;
+  padding: 0.8%;
+  background-color: #963406;
+  width: 30%;
+  margin: 2% auto;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  text-align: center;
+}
+
+.tip-content {
+  display: none;
+}
+
+.tip:hover {
+  color: white;
+}
+
+.tip {
+  text-align: center;
+  cursor: pointer;
+}
+
+.progress {
+  height: 30px;
+  border: 2px solid steelblue;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+}
+
+.show {
+  display: block;
+}

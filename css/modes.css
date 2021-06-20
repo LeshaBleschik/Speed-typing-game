@@ -1,0 +1,15 @@
+.container {
+  text-align: left;
+}
+.modes {
+  margin-bottom: 3%;
+}
+
+li,
+a {
+  color: gold;
+}
+
+span {
+  color: white;
+}
