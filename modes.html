@@ -2,32 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1b5337e3c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/modes.css" />
   </head>
   <body>
-    <div class="container">
-      <ul>
-        <li class="modes">
-          <a href="#single_word" id="singleWord">Одно слово</a>:
-          <span
-            >за короткий промежуток времени вам нужно ввести появившееся слово и
-            набрать как можно больше очков.</span
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="main.html"
+            ><span id="main">Typing Game</span><i class="fas fa-keyboard"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-        </li>
-        <li class="modes">
-          <a href="#whole_text" id="wholeText">Целый текст</a>:<span
-            >вам предлагается абзац текста, где совпадающие буквы подсвечиваются
-            зеленым, а неверно введенные - красным с подчеркиванием.</span
-          >
-        </li>
-        <li class="modes">
-          <a href="#img_game" id="imgGame">Угадай слово по картинке</a>:
-          <span
-            >вместо конкретного слова будет появляться картинка, на основе
-            которой вам нужно предположить ее значение.</span
-          >
-        </li>
-      </ul>
-    </div>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="main.html"
+                  >Главная<span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="modes.html">Режимы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="about.html"
+                  >О проекте</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="content">
+        <div class="container">
+          <ul>
+            <li class="modes">
+              <a href="single_word.html" id="singleWord">Single Word</a>:
+              <span
+                >за короткий промежуток времени нужно ввести появившееся слово и
+                набрать как можно больше очков.</span
+              >
+            </li>
+            <li class="modes">
+              <a href="whole_text.html" id="wholeText">Whole Text</a>:<span>
+                предлагается абзац текста, где совпадающие буквы подсвечиваются
+                зеленым, а неверно введенные - красным с подчеркиванием.</span
+              >
+            </li>
+            <li class="modes">
+              <a href="img_game.html" id="imgGame">Guess The Word</a>:
+              <span
+                >вместо конкретного слова будет появляться картинка, на основе
+                которой нужно предположить ее значение.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

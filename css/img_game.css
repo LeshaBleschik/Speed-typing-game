@@ -4,8 +4,8 @@
   display: none;
 }
 
-img {
-  border: 15px solid rgba(92, 0, 83);
+#randomImg {
+  border: 5px solid black;
   padding: 3px;
   border-radius: 4%;
   width: 400px;
@@ -21,6 +21,7 @@ img {
 
 h1 {
   text-align: center;
+  color: olive;
 }
 
 .rules {
@@ -47,6 +48,7 @@ h1 {
 
 #rules-title:hover {
   color: white;
+  cursor: pointer;
 }
 
 #typingResult {

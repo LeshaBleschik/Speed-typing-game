@@ -1,18 +1,13 @@
-body {
-  font-family: 'Merriweather', serif;
-}
-
-.container {
+.content {
   text-align: center;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h1 {
   margin-top: 2rem;
   text-align: center;
   margin-bottom: 5%;
-  color: olive;
 }
 
 .levels {
@@ -48,7 +43,8 @@ h1 {
 
 .randomWord {
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
+  color: black;
 }
 
 .start {
@@ -60,13 +56,15 @@ h1 {
   margin-right: 40px;
 }
 
-hr {
+.hr {
   margin-top: 0;
-  border: 1.5px solid rgba(0, 0, 0, 0.7);
-  width: 70%;
+  margin-bottom: 4%;
+  border-top: 2px solid black;
+  width: 80%;
+  height: 0;
 }
 
-hr::before {
+.hr::before {
   display: none;
 }
 
@@ -80,7 +78,7 @@ hr::before {
   width: 35%;
   border-radius: 0.4rem;
   padding: 5px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .typedWord:focus {
@@ -89,7 +87,6 @@ hr::before {
 
 .info {
   margin: 1%;
-  font-size: 1.3rem;
 }
 
 .show {

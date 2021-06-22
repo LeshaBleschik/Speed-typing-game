@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">	
-	<link rel="stylesheet" href="css/img_game.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<link rel="stylesheet" href="bootstrap.css">
-</head>
-<body>
-	
-	<audio src="Music/success1.mp3" type="audio/mpeg" id="success"></audio>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1b5337e3c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/img_game.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="main.html"
+            ><span id="main">Typing Game</span><i class="fas fa-keyboard"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="main.html"
+                  >Главная<span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="modes.html">Режимы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="about.html"
+                  >О проекте</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="content">
+		  <audio src="Music/success1.mp3" type="audio/mpeg" id="success"></audio>
 	<audio src="Music/error.mp3" type="audio/mpeg" id="error"></audio>
+	<audio src="Music/clock.mp3" type="audio/mpeg" id="clock"></audio>
 
 	<h1>Угадай слово по картинке.</h1>
-	<div id="container">
+        <div id="container">
 		<button id="start" class="btn btn-warning">Начать игру!</button>
 		<p>Введите слово в соответсвии с предложенной картинкой за <span id="seconds">6</span> секунд:</p>
-		<img id="randomImg" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></img><br>
+		<img id="randomImg" src="images/game-img.png"></img><br>
 		<div id="hiddenWord"></div>
 		<input type="text" id="typedWord" placeholder="Строка ввода:"><br>
 		<div class="info">
@@ -25,10 +75,14 @@
 		</div>
 		<div class="rules">
 		<p id="rules-title"><b>-></b> На заметку <b><-</b></p>
-		<p class="rules-content">По клику вам предлагается случайная картинка и за отведенное время вам нужно предположить ее значение, введя его в строку.</p>
+		<p class="rules-content">По клику вам предлагается случайная картинка и за отведенное время нужно предположить ее значение, введя его в строку.</p>
 		</div>
 	</div>
+      </div>
+    </main>
 
-<script src='/js/img_game.js'></script>
-</body>
+	<script src='/js/img_game.js'></script>
+  </body>
 </html>
+
+

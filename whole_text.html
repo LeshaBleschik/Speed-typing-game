@@ -1,40 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="css/whole_text.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Viaoda+Libre&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/1b5337e3c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/whole_text.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
   </head>
   <body>
-    <h1 class="title">Целый текст.</h1>
-    <button class="btn-start">Начать</button>
-    <button class="clear">Очистить</button>
-    <div id="container">
-      <div class="displayText"></div>
-      <textarea class="textArea"></textarea>
-      <div class="progress">
-        <div
-          class="progress-bar bg-success"
-          role="progressbar"
-          style="width: "
-          aria-valuenow="25"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="main.html"
+            ><span id="main">Typing Game</span><i class="fas fa-keyboard"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="main.html"
+                  >Главная<span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="modes.html">Режимы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="top-board" href="about.html"
+                  >О проекте</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="content">
+        <h1 class="title">Whole Text</h1>
+        <button class="btn-start">Начать</button>
+        <button class="clear">Очистить</button>
+        <div id="container">
+          <div class="displayText"></div>
+          <textarea class="textArea"></textarea>
+          <div class="progress">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: "
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+        <div class="tips">
+          <h4 class="tip"><b>-></b> На заметку <b><-</b></h4>
+          <p class="tip-content">
+            В этом режиме по клику появляется текст, где каждая правильно и
+            неправильно введенная буква подсвечивается определенным светом.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="tips">
-      <h4 class="tip"><b>-></b> На заметку <b><-</b></h4>
-      <p class="tip-content">
-        В этом режиме по клику появляется текст, где каждая правильно и
-        неправильно введенная буква подсвечивается определенным светом.
-      </p>
-    </div>
+    </main>
 
     <script src="js/whole_text.js"></script>
   </body>

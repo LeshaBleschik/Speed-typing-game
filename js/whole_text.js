@@ -23,9 +23,9 @@ const text = [
 textArea.addEventListener('input', () => {
   clearBtn.style.display = 'block';
   let gameStatus = true;
-  const spans = document.querySelectorAll('span');
+  const textCharacter = document.querySelectorAll('.text-character');
   const textAreaValue = textArea.value.split('');
-  spans.forEach(function (spanCharacter, index) {
+  textCharacter.forEach(function (spanCharacter, index) {
     const valueCharacter = textAreaValue[index];
     if (valueCharacter == null) {
       spanCharacter.classList.remove('correct');
@@ -61,7 +61,9 @@ textArea.addEventListener('input', () => {
   }
 
   function progress() {
-    const currentProc = Math.floor((textAreaValue.length / spans.length) * 100);
+    const currentProc = Math.floor(
+      (textAreaValue.length / textCharacter.length) * 100
+    );
     progressBar.innerText = currentProc + '%';
     progressBar.style.width = currentProc + '%';
   }
@@ -80,6 +82,7 @@ function randonTextGenerator() {
   const randomText = text[random];
   randomText.split('').map((character) => {
     const span = document.createElement('span');
+    span.classList.add('text-character');
     span.innerText = character;
     displayText.appendChild(span);
   });
