@@ -37,8 +37,8 @@ const imgGalery = [
     name: 'кольцо',
   },
   {
-    img: 'images/butter.jpg',
-    name: 'масло',
+    img: 'images/hammer.jpg',
+    name: 'молоток',
   },
   {
     img: 'images/tramvay.jpg',
@@ -49,8 +49,8 @@ const imgGalery = [
     name: 'дерево',
   },
   {
-    img: 'images/road.jpg',
-    name: 'дорога',
+    img: 'images/traktor.jpg',
+    name: 'трактор',
   },
   {
     img: 'images/boat.jpeg',
@@ -69,8 +69,8 @@ const imgGalery = [
     name: 'рыба',
   },
   {
-    img: 'images/beaver.jpg',
-    name: 'бобер',
+    img: 'images/laptop.jpeg',
+    name: 'ноутбук',
   },
   {
     img: 'images/molniya.jpg',

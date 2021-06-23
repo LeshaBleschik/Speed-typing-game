@@ -38,7 +38,7 @@ body {
 }
 
 .correct {
-  color: #14ff00;
+  color: #2cff03;
 }
 
 .incorrect {
@@ -48,8 +48,7 @@ body {
 
 .title {
   text-align: center;
-  margin: 3rem 0;
-  color: olive;
+  margin-bottom: 5rem;
 }
 
 .btn-start {
@@ -71,8 +70,8 @@ body {
 
 .clear {
   position: absolute;
-  right: 23.5%;
-  top: 19.5%;
+  right: 23%;
+  bottom: 25%;
   width: 8rem;
   height: 3rem;
   border-radius: 7px;
@@ -89,14 +88,14 @@ body {
 }
 
 .tips {
-  color: black;
   padding: 0.8%;
   background-color: #963406;
-  width: 30%;
+  width: 40%;
   margin: 2% auto;
   font-weight: bold;
   border-radius: 0.6rem;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .tip-content {
@@ -110,6 +109,7 @@ body {
 .tip {
   text-align: center;
   cursor: pointer;
+  color: black;
 }
 
 .progress {

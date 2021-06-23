@@ -364,15 +364,15 @@ function checkWords() {
       randomWord.innerHTML.length <= 6
     ) {
       valid();
-      scoreDisplay.innerHTML = ++score;
+      score++;
     } else if (
       typedWordLoverCase === randomWord.innerHTML &&
       randomWord.innerHTML.length > 6
     ) {
       valid();
       score += 2;
-      scoreDisplay.innerHTML = score;
     }
+    scoreDisplay.innerHTML = score;
   }
 }
 
