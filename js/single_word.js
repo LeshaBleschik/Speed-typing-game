@@ -264,10 +264,32 @@ const words = [
   'биржа',
 ];
 
-function dontRepeatYourself() {
+easy.addEventListener('click', difficultyClickListeners(5));
+medium.addEventListener('click', difficultyClickListeners(3));
+hard.addEventListener('click', difficultyClickListeners(2));
+
+start.addEventListener('click', function () {
+  prepCountDown = 3;
+  prepeareMessage.style.display = 'block';
+  typingResult.innerHTML = '';
+  const prepearingCountDown = setInterval(() => {
+    if (prepCountDown === 0) {
+      clearInterval(prepearingCountDown);
+      prepeareMessage.style.display = 'none';
+    }
+    prepeareTimer.innerHTML = prepCountDown--;
+  }, 1000);
+  setTimeout(gameStart, 4000);
+});
+
+rulesTitle.addEventListener('click', function () {
+  rulesContent.classList.toggle('show');
+});
+
+function commonButtonsFunctionality() {
   time = currentLevel;
   seconds.innerHTML = time;
-  if (currentLevel == 5) {
+  if (currentLevel === 5) {
     secondWord.innerHTML = 'секунд:';
   } else {
     secondWord.innerHTML = 'секунды:';
@@ -283,23 +305,13 @@ function dontRepeatYourself() {
   });
 }
 
-easy.addEventListener('click', function () {
-  this.classList.add('current');
-  currentLevel = 5;
-  dontRepeatYourself();
-});
-
-medium.addEventListener('click', function () {
-  this.classList.add('current');
-  currentLevel = 3;
-  dontRepeatYourself();
-});
-
-hard.addEventListener('click', function () {
-  this.classList.add('current');
-  currentLevel = 2;
-  dontRepeatYourself();
-});
+function difficultyClickListeners(timeInSeconds) {
+  return function () {
+    this.classList.add('current');
+    currentLevel = timeInSeconds;
+    commonButtonsFunctionality();
+  };
+}
 
 function gameStart() {
   score = 0;
@@ -310,20 +322,6 @@ function gameStart() {
   showWord();
   typedWord.addEventListener('input', checkWords);
 }
-
-start.addEventListener('click', function () {
-  prepCountDown = 3;
-  prepeareMessage.style.display = 'block';
-  typingResult.innerHTML = '';
-  const prepearingCountDown = setInterval(() => {
-    if (prepCountDown == 0) {
-      clearInterval(prepearingCountDown);
-      prepeareMessage.style.display = 'none';
-    }
-    prepeareTimer.innerHTML = prepCountDown--;
-  }, 1000);
-  setTimeout(gameStart, 4000);
-});
 
 function showWord() {
   const randIndex = Math.floor(Math.random() * words.length);
@@ -358,22 +356,23 @@ function valid() {
 
 function checkWords() {
   const typedWordLoverCase = typedWord.value.toLowerCase();
-  if (typedWordLoverCase) {
-    if (
-      typedWordLoverCase === randomWord.innerHTML &&
-      randomWord.innerHTML.length <= 6
-    ) {
-      valid();
-      score++;
-    } else if (
-      typedWordLoverCase === randomWord.innerHTML &&
-      randomWord.innerHTML.length > 6
-    ) {
-      valid();
-      score += 2;
-    }
-    scoreDisplay.innerHTML = score;
+  if (!typedWordLoverCase) {
+    return;
   }
+  if (
+    typedWordLoverCase === randomWord.innerHTML &&
+    randomWord.innerHTML.length <= 6
+  ) {
+    valid();
+    score++;
+  } else if (
+    typedWordLoverCase === randomWord.innerHTML &&
+    randomWord.innerHTML.length > 6
+  ) {
+    valid();
+    score += 2;
+  }
+  scoreDisplay.innerHTML = score;
 }
 
 function gameFinish() {
@@ -390,7 +389,3 @@ function gameFinish() {
     btn.classList.remove('current');
   });
 }
-
-rulesTitle.addEventListener('click', function () {
-  rulesContent.classList.toggle('show');
-});

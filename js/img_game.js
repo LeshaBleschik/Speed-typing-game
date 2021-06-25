@@ -113,6 +113,10 @@ start.addEventListener('click', function () {
   typedWord.addEventListener('input', checkWords);
 });
 
+rulesTitle.addEventListener('click', function () {
+  rulesContent.classList.toggle('show');
+});
+
 function showPic() {
   let randIndex = Math.floor(Math.random() * imgGalery.length);
   randomImg.src = imgGalery[randIndex].img;
@@ -155,7 +159,3 @@ function checkWords() {
     time = 6;
   }
 }
-
-rulesTitle.addEventListener('click', function () {
-  rulesContent.classList.toggle('show');
-});

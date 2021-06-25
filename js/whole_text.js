@@ -26,7 +26,7 @@ textArea.addEventListener('input', () => {
   const textAreaValue = textArea.value.split('');
   textCharacter.forEach(function (spanCharacter, index) {
     const valueCharacter = textAreaValue[index];
-    if (valueCharacter == null) {
+    if (!valueCharacter) {
       spanCharacter.classList.remove('correct');
       spanCharacter.classList.remove('incorrect');
       gameStatus = false;
@@ -39,7 +39,7 @@ textArea.addEventListener('input', () => {
       gameStatus = false;
     }
 
-    clearBtn.addEventListener('click', () => {
+    clearBtn.addEventListener('click', function () {
       textArea.value = '';
       progressBar.innerText = '';
       progressBar.style.width = '0%';
@@ -70,10 +70,14 @@ textArea.addEventListener('input', () => {
 });
 
 start.addEventListener('click', () => {
-  if (displayText.innerText == '') {
+  if (!displayText.innerText) {
     randonTextGenerator();
   }
   textArea.focus();
+});
+
+tipTitle.addEventListener('click', () => {
+  tipContent.classList.toggle('show');
 });
 
 function randonTextGenerator() {
@@ -86,7 +90,3 @@ function randonTextGenerator() {
     displayText.appendChild(span);
   });
 }
-
-tipTitle.addEventListener('click', () => {
-  tipContent.classList.toggle('show');
-});
