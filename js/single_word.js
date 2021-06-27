@@ -2,7 +2,7 @@ let time;
 let currentLevel;
 let score = 0;
 let timer;
-let prepCountDown = 3;
+let prepCountDown;
 const allButtons = document.querySelectorAll('.button');
 const success = document.querySelector('#success');
 const error = document.querySelector('#error');
@@ -22,6 +22,7 @@ const rulesTitle = document.querySelector('.rules-title');
 const rulesContent = document.querySelector('.rules-content');
 const prepeareTimer = document.querySelector('.countTimer');
 const prepeareMessage = document.querySelector('.prepeare');
+const timeLeftTextInfo = document.querySelector('.timeLeftTextInfo');
 
 const words = [
   'пальма',
@@ -270,8 +271,11 @@ hard.addEventListener('click', difficultyClickListeners(2));
 
 start.addEventListener('click', function () {
   prepCountDown = 3;
+  start.disabled = true;
   prepeareMessage.style.display = 'block';
   typingResult.innerHTML = '';
+  timeLeftTextInfo.innerHTML = `Введите корректно следующее слово за ${seconds.innerHTML} ${secondWord.innerHTML}`;
+  timeLeftTextInfo.style.display = 'block';
   const prepearingCountDown = setInterval(() => {
     if (prepCountDown === 0) {
       clearInterval(prepearingCountDown);
@@ -286,7 +290,7 @@ rulesTitle.addEventListener('click', function () {
   rulesContent.classList.toggle('show');
 });
 
-function commonButtonsFunctionality() {
+function commonButtonFunctionality() {
   time = currentLevel;
   seconds.innerHTML = time;
   if (currentLevel === 5) {
@@ -309,11 +313,12 @@ function difficultyClickListeners(timeInSeconds) {
   return function () {
     this.classList.add('current');
     currentLevel = timeInSeconds;
-    commonButtonsFunctionality();
+    commonButtonFunctionality();
   };
 }
 
 function gameStart() {
+  timeLeftTextInfo.innerText = 'Игра началась!';
   score = 0;
   scoreDisplay.innerHTML = score;
   start.innerHTML = 'Начать игру!';
@@ -378,11 +383,12 @@ function checkWords() {
 function gameFinish() {
   clockSound.pause();
   randomWord.innerHTML = '';
-  typingResult.innerHTML = 'Время вышло.';
+  typingResult.innerHTML = 'Время вышло';
   typingResult.style.color = 'red';
   start.innerHTML = 'Начать заново!';
   start.setAttribute('disabled', 'true');
   clearInterval(timer);
+  timeLeftTextInfo.style.display = 'none';
   allButtons.forEach((btn) => {
     btn.classList.remove('levelDisplay');
     btn.style.display = 'inline-block';

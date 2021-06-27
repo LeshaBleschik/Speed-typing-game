@@ -1,6 +1,7 @@
 let time = 5;
 let timer;
 let score = 0;
+let prepCountDown;
 const seconds = document.querySelector('#seconds');
 const start = document.querySelector('#start');
 const randomImg = document.querySelector('#randomImg');
@@ -14,6 +15,8 @@ const error = document.querySelector('#error');
 const clock = document.querySelector('#clock');
 const rulesTitle = document.querySelector('#rules-title');
 const rulesContent = document.querySelector('.rules-content');
+const prepeareMessage = document.querySelector('.prepeareMessage');
+const prepeareTimer = document.querySelector('.countTimer');
 
 const imgGalery = [
   {
@@ -99,6 +102,23 @@ const imgGalery = [
 ];
 
 start.addEventListener('click', function () {
+  prepCountDown = 3;
+  prepeareMessage.style.display = 'block';
+  const prepearingCountDown = setInterval(() => {
+    if (prepCountDown === 0) {
+      clearInterval(prepearingCountDown);
+      prepeareMessage.style.display = 'none';
+    }
+    prepeareTimer.innerHTML = prepCountDown--;
+  }, 1000);
+  setTimeout(startGameFunctionality, 4000);
+});
+
+rulesTitle.addEventListener('click', function () {
+  rulesContent.classList.toggle('show');
+});
+
+function startGameFunctionality() {
   start.disabled = true;
   clock.play();
   start.innerHTML = 'Начать игру!';
@@ -111,11 +131,7 @@ start.addEventListener('click', function () {
   typedWord.focus();
   showPic();
   typedWord.addEventListener('input', checkWords);
-});
-
-rulesTitle.addEventListener('click', function () {
-  rulesContent.classList.toggle('show');
-});
+}
 
 function showPic() {
   let randIndex = Math.floor(Math.random() * imgGalery.length);
@@ -137,7 +153,7 @@ function countDown() {
 }
 
 function gameFinish() {
-  typingResult.innerHTML = 'Игра окончена.';
+  typingResult.innerHTML = 'Игра окончена';
   typingResult.style.color = 'red';
   start.innerHTML = 'Начать заново!';
   clock.pause();

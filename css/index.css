@@ -8,7 +8,6 @@ body {
 
 #content {
   border: 20px solid rgba(138, 7, 26, 0.2);
-  padding: 2%;
   max-width: 2000px;
   width: 90%;
   margin: 0 auto;
@@ -17,7 +16,7 @@ body {
   font-weight: 700px;
   font-size: 2rem;
   color: white;
-  padding: 15%;
+  padding: 14rem;
 }
 
 hr {

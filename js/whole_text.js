@@ -38,15 +38,6 @@ textArea.addEventListener('input', () => {
       spanCharacter.classList.add('incorrect');
       gameStatus = false;
     }
-
-    clearBtn.addEventListener('click', function () {
-      textArea.value = '';
-      progressBar.innerText = '';
-      progressBar.style.width = '0%';
-      spanCharacter.classList.remove('correct');
-      spanCharacter.classList.remove('incorrect');
-      clearBtn.style.display = 'none';
-    });
   });
 
   if (!textArea.value) {
@@ -78,6 +69,18 @@ start.addEventListener('click', () => {
 
 tipTitle.addEventListener('click', () => {
   tipContent.classList.toggle('show');
+});
+
+clearBtn.addEventListener('click', function () {
+  textArea.value = '';
+  progressBar.innerText = '';
+  progressBar.style.width = '0%';
+  const textCharacter = document.querySelectorAll('.text-character');
+  textCharacter.forEach(function (spanCharacter) {
+    spanCharacter.classList.remove('correct');
+    spanCharacter.classList.remove('incorrect');
+  });
+  clearBtn.style.display = 'none';
 });
 
 function randonTextGenerator() {

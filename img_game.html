@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <title>Speed Typing Game</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/img_game.css">
   </head>
   <body>
@@ -57,31 +57,34 @@
 
     <main>
       <div id="content">
-		  <audio src="Music/success1.mp3" type="audio/mpeg" id="success"></audio>
-	<audio src="Music/error.mp3" type="audio/mpeg" id="error"></audio>
-	<audio src="Music/clock.mp3" type="audio/mpeg" id="clock"></audio>
+        <audio src="Music/success1.mp3" type="audio/mpeg" id="success"></audio>
+        <audio src="Music/error.mp3" type="audio/mpeg" id="error"></audio>
+        <audio src="Music/clock.mp3" type="audio/mpeg" id="clock"></audio>
 
-	<h1>Guess The Word</h1>
+        <h1>Guess The Word</h1>
         <div id="container">
-		<button id="start" class="btn btn-warning">Начать игру!</button>
-		<p>Введите слово в соответсвии с предложенной картинкой за <span id="seconds">6</span> секунд:</p>
-		<img id="randomImg" src="images/game-img.png"></img><br>
-		<div id="hiddenWord"></div>
-		<input type="text" id="typedWord" placeholder="Строка ввода:"><br>
-		<div class="info">
-			<span id="typingResult"></span><br>
-			<span>Осталось времени: <span id="timeLeft">0</span></span>
-			<span>Ваши очки: <span id="scoreDisplay">0</span></span>
-		</div>
-		<div class="rules">
-		<p id="rules-title"><b>-></b> На заметку <b><-</b></p>
-		<p class="rules-content">По клику вам предлагается случайная картинка и за отведенное время нужно предположить ее значение, введя его в строку.</p>
-		</div>
-	</div>
+          <button id="start" class="btn btn-warning">Начать игру!</button>
+          <p class="prepeareMessage">
+            Приготовьтесь. Игра начнется через: <span class="countTimer"></span> сек.
+          </p>
+          <p>Введите слово в соответсвии с предложенной картинкой за <span id="seconds">6</span> секунд:</p>
+          <img id="randomImg" src="images/game-img.png"></img><br>
+          <div id="hiddenWord"></div>
+          <input type="text" id="typedWord" placeholder="Строка ввода:"><br>
+          <div class="info">
+            <span id="typingResult"></span><br>
+            <span class='timeLeftMessage'>Осталось времени: <span id="timeLeft">0</span> сек.</span>
+            <span>Ваши очки: <span id="scoreDisplay">0</span></span>
+          </div>
+          <div class="rules">
+            <p id="rules-title"><b>-></b> На заметку <b><-</b></p>
+            <p class="rules-content">По клику вам предлагается случайная картинка и за отведенное время нужно предположить ее значение, введя его в строку.</p>
+          </div>
+        </div>
       </div>
     </main>
 
-	<script src='/js/img_game.js'></script>
+	  <script src='/js/img_game.js'></script>
   </body>
 </html>
 
